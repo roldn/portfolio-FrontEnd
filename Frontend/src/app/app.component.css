@@ -1,0 +1,15 @@
+
+.anchorestringido{
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: var(--theme-color);
+    color: var(--text-color);
+    max-width: 980px;
+    margin: 0 auto;    
+}
+
+.anchomaximo{
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: var(--theme-color);
+    color: var(--text-color);
+    margin: 0 auto; 
+}

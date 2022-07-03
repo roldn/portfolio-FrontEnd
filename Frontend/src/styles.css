@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+:root{
+    --theme-color: white;
+    --primary-color:#232a34;
+    --secundary-color: #64b6b2;
+    --text-color-inverse: white;
+    --text-color: black;
+    --navbar-shallow-color: grey;
+    --menu-mobile-background78-color:#64b6b;
+}
+
+body{
+    color: var(--primary-color);
+    font-family: 'Gotham Black', sans-serif;
+    color: darkslategrey;
+    
+}
+
+a{
+    text-decoration: none;
+    color: var(--text-color);
+}
