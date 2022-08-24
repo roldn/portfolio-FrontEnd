@@ -16,7 +16,8 @@
             <li><a href="#tecnology">proyectos</a></li>
             <li><a href="#experiencias">experiencias</a></li>
             <li><a href="#contact">contacto</a></li>
-            <button type="button" class="btn btn-link" (click)="login()">ingresar</button>
+            <button type="button" class="btn btn-link" (click)="login()" *ngIf="!isLogged">ingresar</button>
+            <button type="button" class="btn btn-link" (click)="onLogOut()" *ngIf="isLogged">Cerrar Sesción</button>
         </ul>
     </nav>
 </header>
