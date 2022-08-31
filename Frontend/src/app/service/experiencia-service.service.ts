@@ -7,7 +7,7 @@ import { Experiencia } from '../model/experiencia';
 
 export class ExperienciaService {
 
-  url = 'https://git.heroku.com/backendroldn.git/experiencia';
+  url = 'https://backendroldn.herokuapp.com/experiencia';
 
   constructor(private httpClient: HttpClient) { }
 

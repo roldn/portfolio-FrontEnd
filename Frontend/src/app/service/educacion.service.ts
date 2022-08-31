@@ -8,7 +8,7 @@ import { Educacion } from '../model/educacion';
 })
 export class EducacionService {
 
-  url = 'https://git.heroku.com/backendroldn.git/educacion';
+  url = 'https://backendroldn.herokuapp.com/educacion';
 
   constructor(private httpClient: HttpClient) { }
 

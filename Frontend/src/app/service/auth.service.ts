@@ -13,7 +13,7 @@ export class AuthService {
   //Ambiente de prueba --- authURL = 'http://localhost:8080/auth/;'
 
   //Ambiente de producción:
-  authURL = 'https://git.heroku.com/backendroldn.git/auth';
+  authURL = 'https://backendroldn.herokuapp.com/auth';
 
   constructor(private httpClient: HttpClient) { }
 
