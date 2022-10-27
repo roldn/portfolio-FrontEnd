@@ -1,0 +1,23 @@
+<div class="row">
+
+    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+        <img src="{{persona.img}}" alt="" srcset="" class="img-fluid" id="fotoperfil">
+        <div >
+            <button type="button" class="btn btn-dark" routerLink="/editaracercade/{{persona.id}}" *ngIf="isLogged"><i
+                    class="bi bi-plus"></i>Editar</button>
+        </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 descripcion">
+        <div>
+            <p class="name" id="textbanner"> Hola! soy {{persona.apellido}} {{persona.nombre}}</p>
+            <p class="profession" id="textbanner">Web Developer</p>
+            
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  descripcion">
+                <span>
+                    <p>{{persona.descripcion}}</p>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>

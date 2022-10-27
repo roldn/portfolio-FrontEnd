@@ -1,0 +1,30 @@
+<header class="topheader" style="align-items:center;">
+
+    <nav class="navbar navbar-expand-lg bg-light">
+
+        <div class="container-fluid">
+            <a class="navbar-brand logo" href="#">
+                <img height="50px" width="50px" src="../../../../../assets/APLogo.png" alt="firma" />
+                <div>argentina<br>programa</div>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse nav justify-content-end" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    
+                    <li><a href="http://wa.me/+5493425308137"><img src="../../../assets/whatsapp.png" alt="Whatsapp" srcset=""></a></li>
+                    <li><a href="https://www.linkedin.com/in/roldanfrancisco"><img src="../../../assets/linkedin.png" alt="LinkedIn" srcset=""></a></li>
+                    <li><a href="https://github.com/roldn"><img src="../../../assets/github.png" alt="Github" srcset=""></a></li>
+                    <li><a href="https://twitter.com/FranciscoRoldn"><img src="../../../assets/twitter.png" alt="Twitter" srcset=""></a></li>
+                
+                    <button type="button" class="btn btn-link" (click)="login()" *ngIf="!isLogged">Log In</button>
+                    <button type="button" class="btn btn-link" (click)="onLogOut()" *ngIf="isLogged">Log Out</button>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>

@@ -1,0 +1,41 @@
+            <div class="row">
+
+                <h1>Habilidades</h1>
+                <div class="col-lg-2">
+                    <button type="button" routerLink="/nuevahabilidad" class="btn btn-dark" *ngIf="isLogged">+ Agregar</button>
+                </div>            
+            
+                <div class="text-center col-sm-4 col-md-4 col-lg-4 circulo" *ngFor="let habilidad of habilidad">
+                    <circle-progress 
+                    [percent]="(habilidad.porcentaje)" 
+                    [radius]="80"
+                    [imageSrc]="''" 
+                    [title]="(habilidad.titulo)"
+                    [titleColor]="'#212F3C'"
+                    [showTitle]="true" 
+                    [showImage]="false" 
+                    [imageHeight]="70" 
+                    [imageWidth]="70" 
+                    [showUnits]="false"
+                    [showSubtitle]="false" 
+                    [outerStrokeWidth]="16" 
+                    [innerStrokeWidth]="2" 
+                    [outerStrokeColor]="'#78C000'"
+                    [innerStrokeColor]="'#C7E596'" 
+                    [animation]="true" 
+                    [animationDuration]="600">
+                    </circle-progress>
+            
+                    <div>
+                        <td *ngIf="isLogged">
+                            <button class="btn btn-light" routerLink="/editarhabilidad/{{habilidad.id}}">
+                                <i class="bi bi-pen"></i></button>
+                        </td>
+                        <td *ngIf="isLogged">
+                            <button class="btn btn-danger" (click)="borrar(habilidad.id)">
+                                <i class="bi bi-trash3-fill"></i></button>
+                        </td>
+                    </div>
+                    
+                </div>
+            </div>

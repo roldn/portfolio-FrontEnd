@@ -1,0 +1,61 @@
+.row{
+    padding: 10px;
+    text-align: center;
+}
+
+.descripcion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.name{
+    font-size: 35px;
+    margin-bottom: -3%;
+    font-family: 'Gotham Light', sans-serif;
+}
+
+.profession{
+    font-size: 50px;
+    margin-top: 0%;
+    font-family: 'Gotham Black', sans-serif;
+}
+
+/*estilo de foto de perfil*/
+@media (min-width: 576px) {
+
+    #fotoperfil{
+        border-radius: 100%;
+        box-shadow: 3px 3px 3px grey;
+        align-items: center;
+    }
+
+    #textbanner{
+        color: darkslategrey;
+        text-align: left;
+    }
+
+}
+
+@media (max-width: 575px) {
+
+    #fotoperfil{
+      align-items: center ;
+      border-radius: 100%;
+      align-items: center;
+      inline-size: auto;
+    }
+
+    #textbanner{
+        color: darkslategrey;
+        text-align: center;
+    }
+}
+
+/*etiqueta nombre*/
+#nombre{
+    font-weight: bold;
+    margin-top: 40%;
+    margin-left: 10%;
+
+}
