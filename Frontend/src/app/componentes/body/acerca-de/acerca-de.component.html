@@ -1,22 +1,23 @@
 <div class="row">
-    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2"></div>
-    <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10" id="textbanner">
-        <p class="name"> Hi! I'm {{persona.apellido}} {{persona.nombre}}</p>
-        <p class="profession">Web Developer jr.</p>
+
+    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+        <img src="{{persona.img}}" alt="" srcset="" class="img-fluid" id="fotoperfil">
+        <div >
+            <button type="button" class="btn btn-dark" routerLink="/editaracercade/{{persona.id}}" *ngIf="isLogged"><i
+                    class="bi bi-plus"></i>Editar</button>
+        </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 descripcion">
+        <div>
+            <p class="name" id="textbanner"> Hola! soy {{persona.apellido}} {{persona.nombre}}</p>
+            <p class="profession" id="textbanner">Web Developer</p>
+            
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  descripcion">
+                <span>
+                    <p>{{persona.descripcion}}</p>
+                </span>
+            </div>
+        </div>
     </div>
 </div>
-
-<div class="row">
-    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-        <img src="../../../../assets/Roldán Francisco ( CV ).png" alt="" srcset="" class="img-fluid" id="fotoperfil">
-    </div>
-    
-    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
-        <span>
-            <h1>Acerca de mí</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa dolorum, consequatur modi magni eligendi
-                minima voluptatibus accusamus qui labore a. Maxime sed aperiam quaerat explicabo perspiciatis quisquam
-                dolorem amet rerum?</p>
-        </span>
-    </div>
-</div>  

@@ -1,6 +1,7 @@
-.topheader{
+.topheader {
     box-shadow: 0px 4px 10px 0px var(--primary-color);
-    position: fixed;   
+    position: static;
+    align-items: center;
     background-color: var(--theme-color);
     left: 0;
     top: 0;
@@ -9,7 +10,21 @@
     z-index: 2;
 }
 
-.topnav{
+
+li{
+    list-style: none;
+    display: inline;
+    align-items: center;
+    margin: 0;
+    padding: 5px;
+}
+
+img{
+    height: 40px;
+    width: auto;
+}
+
+.topnav {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -20,7 +35,7 @@
 
 /*logo*/
 
-.logo{
+.logo {
     display: flex;
     align-items: center;
     font-size: 18px;
@@ -44,7 +59,7 @@
     padding: 0;
 }
 
-.menu li{
+.menu li {
     padding: 0 15px;
 }
 
@@ -57,14 +72,14 @@
 
 
 .open-menu,
-.close-menu{
+.close-menu {
     display: none;
 }
 
-@media (max-width: 950px){
-    
+@media (max-width: 950px) {
+
     /*menú*/
-    
+
     .menu {
         flex-direction: column;
         position: fixed;
@@ -80,37 +95,37 @@
         pointer-events: none;
         transition: opacity 0.3s;
     }
-    
-    .menu li{
+
+    .menu li {
         padding: 0;
     }
-    
+
     .menu a {
         color: var(--text-color-inverse);
         line-height: 60px;
     }
 
     .open-menu,
-    .close-menu{
+    .close-menu {
         display: block;
         border: none;
         background: none;
         cursor: pointer;
     }
 
-    .close-menu{
+    .close-menu {
         align-self: flex-end;
         padding: 20px 15px;
         cursor: pointer
     }
 
-    .menu_opened{
+    .menu_opened {
         opacity: 1;
         pointer-events: all;
     }
 
     .open-menu:focus:not(:focus-visible),
-    .close-menu:focus:not(:focus-visible){
+    .close-menu:focus:not(:focus-visible) {
         outline: none;
     }
 }

@@ -1,13 +1,15 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, retry } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { Experiencia } from '../model/experiencia';
 
 @Injectable({ providedIn: 'root' })
 
 export class ExperienciaService {
 
-  url = 'https://backendroldn.herokuapp.com/experiencia';
+  path = ''
+  url = environment.URL + 'experiencia'
 
   constructor(private httpClient: HttpClient) { }
 

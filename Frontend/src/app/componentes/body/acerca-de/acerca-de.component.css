@@ -3,15 +3,22 @@
     text-align: center;
 }
 
+.descripcion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .name{
-    font-size: 2.5em;
+    font-size: 35px;
     margin-bottom: -3%;
     font-family: 'Gotham Light', sans-serif;
 }
 
 .profession{
-    font-size: 3em;
+    font-size: 50px;
     margin-top: 0%;
+    font-family: 'Gotham Black', sans-serif;
 }
 
 /*estilo de foto de perfil*/
@@ -19,20 +26,13 @@
 
     #fotoperfil{
         border-radius: 100%;
-        position: absolute;
-        width: 15%;
         box-shadow: 3px 3px 3px grey;
-        bottom: 27%;
+        align-items: center;
     }
 
     #textbanner{
-        font-family: 'Gotham Black', sans-serif;
-        position: absolute;
         color: darkslategrey;
         text-align: left;
-        align-items: bottom;
-        margin-left: 25%;
-        bottom: 37%;
     }
 
 }
@@ -41,21 +41,14 @@
 
     #fotoperfil{
       align-items: center ;
-      position: absolute;
       border-radius: 100%;
-      width: 30%;
-      box-shadow: 3px 3px 3px grey;
-      bottom: 31%;
-      left: 33%;
+      align-items: center;
+      inline-size: auto;
     }
 
     #textbanner{
-        font-family: 'Gotham Black', sans-serif;
         color: darkslategrey;
-        position: absolute;
-        font-size: 1.5em;
         text-align: center;
-        align-items: bottom;
     }
 }
 

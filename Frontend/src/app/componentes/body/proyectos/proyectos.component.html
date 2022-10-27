@@ -1,14 +1,28 @@
 <div class="row">
-    <h1>Proyectos Realizados</h1>
-    <div class="contenedor">
-        <div class="col-sm-12 col-md-7 col-lg-7 parte1">
-            <h2>Calculadora</h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa obcaecati iure, perferendis alias commodi
-                autem sint repellendus tenetur hic itaque eaque officiis, veniam necessitatibus eos, quod vel nobis amet
-                delectus!</p>
-        </div>
-        <div class="col-sm-12 col-md-3 col-lg-3 offset-md-1 offset-lg-1 parte2 imgproyecto">
-            <img src="../../../../assets/github.png" alt="captura del proyecto" srcset="" class="img-fluid">
+    <h1>Proyectos</h1>
+    <div class="col-lg-3">
+        <button type="button" class="btn btn-dark" routerLink="/nuevoproyecto" *ngIf="isLogged"><i
+                class="bi bi-plus"></i>Agregar</button>
+    </div>
+</div>
+
+<div class="row">
+    <div class="card" style="width: 18rem; align-self: auto;" *ngFor="let Proyecto of proyecto">
+        <div class="card-body">
+            <h5 class="card-title">{{Proyecto.titulo}}</h5>
+            <p class="card-text">{{Proyecto.descripcionP}}</p>
+            <button class="btn btn-light"><a href="{{Proyecto.urlProyecto}}"><i class="bi bi-github"></i></a></button>
+            <hr />
+            <table>
+                <tbody>
+                    <tr>
+                        <td *ngIf="isLogged"><button class="btn btn-light" routerLink="/editarproyecto/{{Proyecto.id}}">
+                                <i class="bi bi-pen"></i></button></td>
+                        <td *ngIf="isLogged"><button class="btn btn-danger" (click)="borrar(Proyecto.id)">
+                                <i class="bi bi-trash3-fill"></i></button></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </div>

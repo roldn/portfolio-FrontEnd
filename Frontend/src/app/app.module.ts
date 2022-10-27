@@ -20,21 +20,36 @@ import { NuevaExpComponent } from './componentes/body/experiencies/nueva-exp/nue
 import { EditarExpComponent } from './componentes/body/experiencies/editar-exp/editar-exp.component';
 import { NuevaeduComponent } from './componentes/body/educacion/nuevaedu/nuevaedu.component';
 import { EditareduComponent } from './componentes/body/educacion/editaredu/editaredu.component';
+import { EditarProyectoComponent } from './componentes/body/proyectos/editar-proyecto/editar-proyecto.component';
+import { NuevoProyectoComponent } from './componentes/body/proyectos/nuevo-proyecto/nuevo-proyecto.component';
+import { EditarAcercaDeComponent } from './componentes/body/acerca-de/editar-acerca-de/editar-acerca-de.component';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage, getStorage } from '@angular/fire/storage';
+import { EditarHabilidadComponent } from './componentes/body/skills/editar-habilidad/editar-habilidad.component';
+import { NuevaHabilidadComponent } from './componentes/body/skills/nueva-habilidad/nueva-habilidad.component';
 
 
 @NgModule({
-  declarations: [AppComponent, 
-    NavBarComponent, BannerComponent, 
-    FooterComponent, ExperienciesComponent, 
-    AcercaDeComponent, EducacionComponent, 
-    SkillsComponent, ProyectosComponent, 
-    HomeComponent, LoginComponent, NuevaExpComponent, EditarExpComponent, NuevaeduComponent, EditareduComponent],
+  declarations: [AppComponent,
+    NavBarComponent, BannerComponent,
+    FooterComponent, ExperienciesComponent,
+    AcercaDeComponent, EducacionComponent,
+    SkillsComponent, ProyectosComponent,
+    HomeComponent, LoginComponent,
+    NuevaExpComponent, EditarExpComponent,
+    NuevaeduComponent, EditareduComponent,
+    EditarProyectoComponent, NuevoProyectoComponent,
+    EditarAcercaDeComponent, EditarHabilidadComponent,
+    NuevaHabilidadComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgCircleProgressModule.forRoot({}),
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage())
   ],
   providers: [
     interceptorProvider
