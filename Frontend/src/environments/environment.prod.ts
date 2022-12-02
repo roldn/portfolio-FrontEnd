@@ -9,5 +9,5 @@ export const environment = {
     messagingSenderId: '679130003006',
   },
   production: true,
-  URL: 'https://backendroldn.herokuapp.com/'
+  URL: 'https://638a0a0311339b19388e9e88--frolicking-bienenstitch-baa25b.netlify.app/'
 };
